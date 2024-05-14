@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="productList"></div>
+
+    <script>
+        let products = [
+            { name: 'Product 1', price: 100, description: 'Description for product 1' },
+            { name: 'Product 2', price: 200, description: 'Description for product 2' },
+            { name: 'Product 3', price: 300, description: 'Description for product 3' },
+            { name: 'Product 4', price: 400, description: 'Description for product 4' }
+        ];
+
+        let productList = document.getElementById('productList');
+
+        for (let i = 0; i < products.length; i++) {
+            let product = products[i];
+            let productDiv = document.createElement('div');
+            productDiv.innerHTML = `<h2>${product.name}</h2><p>Price: ${product.price}</p><p>${product.description}</p>`;
+            productList.appendChild(productDiv);
+        }
+    </script>
+</body>
+
+</html>
